@@ -1,0 +1,58 @@
+step 1:
+in window  terminal run cmd npx create-react-app inotebook
+create backend folder in react app
+open backend folder
+and in vs code run npm init
+fill the data required for the initialize
+run these commands{npm i express
+npm i mongoose}
+create index.js in backend
+install thunder client in vs code for checking api
+
+step 2:
+create db.js
+const mongoose=require('mongoose')
+const mongoURI="copy paste the mongo db url"
+create a const connectToMongo=()=>{
+    mongoose.connect(mongoURI,callbackfunv ()=>{
+        console.log("conttected to mongo")
+    })
+}
+export mongoURI
+step 3:
+import mongo in index.js using require
+and run npm i -D nodemon
+paste express js basic function from express website and run in index.js
+
+step:4
+create models folder for mongoose
+create routes folder
+create User.js and Notes.js in models
+create a Schema in User.js
+and module.exports=mongoose.model('user',USerschema)
+create the same for Notes.js.
+
+step:5
+create routes
+app.use('./api/auth',require("./routes/auth.js')) in index.js
+
+import express and router in auth.js in routes folder
+router.get('/',(req,res)=>{
+    obj={
+        a:vish,
+        gen:m
+    }
+    res.json([])
+})
+then export & do the same for notes.js
+
+
+step:6
+app.use(express.json); as middle ware to use req.body
+create a user using POST in auth.js
+import Schema in user.js using const { Schema } = mongoose;
+
+step 7:
+install express validator
+and add  const { body, validationResult } = require('express-validator'); in auth.js
+
